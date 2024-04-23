@@ -10,11 +10,11 @@ Welcome to PNCLibraryRepository! This repository serves as the central hub for a
 
 ## Getting Started
 
-To get started, simply clone this repository to your local machine and explore the available resources. If you're interested in contributing, please read our [contribution guidelines](CONTRIBUTING.md).
+To get started, simply clone this repository to your local machine and explore the available resources. If you're interested in contributing, please contact our email address.
 
 ## Contributing
 
-We welcome contributions from the community! Whether you're fixing a bug, implementing a new feature, or improving documentation, your efforts are valued. Please review our [contribution guidelines](CONTRIBUTING.md) before submitting your contribution.
+We welcome contributions from the community! Whether you're fixing a bug, implementing a new feature, or improving documentation, your efforts are valued. please contact our email address.
 
 ## Feedback
 

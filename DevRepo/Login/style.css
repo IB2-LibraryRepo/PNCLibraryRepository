@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/BG1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Add this line */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 22, 21, 0.7);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.box-area {
+    max-width: 930px; 
+    margin: 0 auto; 
+}
+
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+.header-text h2 {
+    text-align: center;
+}
+
+.btn-login {
+    background-color: #006400;
+    border-color: #006400;
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; 
+}
+
+.btn-login:hover {
+    background-color: #005300;
+    border-color: #005300;
+    color: #fff;
+}
+
+.icon-gradient {
+    background: linear-gradient(to right, #006400, #00cc66); /* Adjust gradient colors as needed */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.left-box {
+    position: relative;
+    background: linear-gradient(to bottom left, #00cc66 10%, white 90%);
+}
+
+.featured-image {
+    transition: transform 0.5s;
+}
+
+.featured-image:hover {
+    animation: spin 0.5s;
+}
+
+/* Smooth transition for the modal */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translateY(-50px);
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.left-box:hover {
+    background: linear-gradient(to bottom right, #00cc66 50%, white 50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}
+
+.btn-outline-secondary {
+    color: #006400; /* Set default button color */
+    border-color: #006400; /* Set default border color */
+}
+
+.btn-outline-secondary:hover {
+    color: #fff !important; /* Set hover button color */
+    border-color: #00cc66 !important; /* Set hover border color */
+    background-color: #00cc66 !important;;
+}
+
+#togglePassword:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Custom CSS for checkbox */
+.form-check-input:checked {
+    background-color: #00cc66; /* Change background color when checked */
+    border-color: #00cc66; /* Change border color when checked */
+}
+
+.form-check-input:checked:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 204, 102, 0.5); /* Change focus shadow color when checked */
+}
+
+@media only screen and (max-width: 768px) {
+    .box-area {
+        width: 100%; /* Change width to 100% */
+        padding: 0 20px; /* Adjust padding for responsiveness */
+    }
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+
+    .featured-image img {
+        width: 75px;
+    }
+}

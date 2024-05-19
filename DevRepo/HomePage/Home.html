@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNC Library Repository</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap Icons CSS -->
+  <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom styles here */
+    /* Navbar */
+    /* Navbar */
+    .navbar {
+      position: -webkit-sticky; /* For Safari */
+      position: sticky;
+      top: 0;
+      z-index: 1020; /* Ensure it sits above other elements */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    }
+    .navbar-brand img {
+      max-height: 40px;
+    }
+    .navbar-brand span {
+      font-size: 1.25rem;
+      color: #fff; /* Ensure the text color contrasts with the background */
+      margin-left: 10px; /* Space between the logo and text */
+    }
+    .navbar-scrolled {
+      background-color: #fff !important; /* Change background color to white */
+    }
+    .navbar-scrolled .navbar-brand span {
+      color: #0d721a !important; /* Change text color to black */
+    }
+    .navbar-scrolled .nav-item a {
+      color: #0d721a !important; /* Change text color to black */
+    }
+    /* Add this CSS for changing icon color to black when scrolled */
+    .navbar-dark .navbar-toggler-icon {
+      filter: invert(1); /* Invert the color of the icon to black */
+    }
+    /* Custom CSS */
+    .hero-section {
+      position: relative;
+      background-image: url('../images/BG1.jpg'); /* Change to your image path */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      height: 100vh; /* Full height of viewport */
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(21, 22, 21, 0.7); /* Overlay color */
+      z-index: 0; /* Ensure it's behind the content */
+    }
+    .hero-section-content {
+      position: relative; /* Ensure content is stacked on top of overlay */
+      display: flex; /* Add flex display */
+      flex-direction: column; /* Align children in a column */
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
+    }
+    .hero-section h1 {
+      margin-top: 1.5em;
+      font-size: 3.5rem;
+    }
+    .hero-section p {
+      font-size: 1.5rem;
+    }
+    /* Footer */
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+    }
+    @media only screen and (max-width: 768px) {
+      .hero-section {
+        height: 75vh;
+      }
+      .hero-section h1 {
+        margin-top: 1.5em;
+        font-size: 1.75rem;
+      }
+      .hero-section p {
+        font-size: 0.75rem;
+      }
+      .navbar-collapse.overlay {
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        position: absolute;
+        top: 56px; /* Adjust this value based on your navbar height */
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background for overlay effect */
+        z-index: 1; /* Ensure it overlays the content */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .navbar-collapse.show.overlay {
+        max-height: 500px; /* Adjust this value based on your needs */
+      }
+      .navbar-scrolled .navbar-collapse.overlay {
+        background-color: rgba(255, 255, 255, 0.85);
+      }
+    }
+    .about-section, .scholarly-works-section {
+      padding: 60px 0;
+    }
+    .about-section img, .scholarly-works-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .about-section h2, .scholarly-works-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .about-section p, .scholarly-works-section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .scholarly-works-section {
+      background-color: #0c470f; /* Dark green background color */
+      color: #fff;
+    }
+    .scholarly-works-section .btn-primary {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../images/logo.png" alt="Logo">
+      <span>PNC Library Repository</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-info-circle-fill"></i> About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-gear-fill"></i> Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link login-link" href="#"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="container hero-section-content">
+    <h1>PNC Library Repository</h1>
+    <p>We provide excellent services to meet your needs.</p>
+    <a href="#" class="btn btn-primary">Start Now</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="../images/logo.png" alt="About Image">
+      </div>
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>Welcome to the PNC Library Repository. Our mission is to provide comprehensive access to a vast collection of resources that cater to the diverse needs of our users. Whether you're a student, researcher, or just an avid reader, we have something for everyone. Our state-of-the-art facilities and dedicated staff ensure a seamless and enriching experience.</p>
+        <p>Join us in exploring a world of knowledge and learning. With our extensive digital and physical collections, you're sure to find the information and inspiration you need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search Scholarly Works Section -->
+<section class="scholarly-works-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Search Scholarly Works</h2>
+        <p>Explore our extensive database of scholarly works to find articles, papers, and research material across various disciplines. Our repository is designed to support your academic and professional research needs with ease and efficiency.</p>
+        <p>With advanced search options, you can filter results by publication date, author, subject, and more. Start your journey of discovery and make the most of our comprehensive resources.</p>
+        <a href="#" class="btn btn-primary">Search Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="../images/search-scholarly-works.jpg" alt="Search Scholarly Works Image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sections -->
+<section>
+  <div class="container">
+    <h2>Section 1</h2>
+    <p>This is section 1 content related to the PNC Library Repository.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Section 2</h2>
+    <p>This is section 2 content related to the PNC Library Repository.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <p>&copy; 2024 PNC Library Repository. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for asynchronously redirecting to login.html -->
+<script>
+  $(document).ready(function(){
+    // Function to toggle navbar style based on scroll position
+    function toggleNavbarStyle() {
+      var scrollY = window.scrollY; // Get the vertical scroll position
+      var navbar = $('.navbar'); // Get the navbar element
+
+      // Check if scrollY is greater than or equal to 300
+      if (scrollY >= 300) {
+        navbar.addClass('navbar-scrolled'); // Add the 'navbar-scrolled' class
+      } else {
+        navbar.removeClass('navbar-scrolled'); // Remove the 'navbar-scrolled' class
+      }
+    }
+
+    // Call the toggleNavbarStyle function on page load
+    toggleNavbarStyle();
+
+    // Call the toggleNavbarStyle function when the window is scrolled
+    $(window).scroll(function() {
+      toggleNavbarStyle();
+    });
+
+    // Redirect to login.html when the login link is clicked
+    $('.login-link').click(function(e){
+      e.preventDefault(); // Prevent default link behavior
+      window.location.href = '../Login/Login.html'; // Redirect to login.html
+    });
+
+    // Toggle overlay class on navbar collapse
+    $('#navbarNav').on('show.bs.collapse', function () {
+      $(this).addClass('overlay');
+    });
+    $('#navbarNav').on('hide.bs.collapse', function () {
+      $(this).removeClass('overlay');
+    });
+  });
+</script>
+
+</body>
+</html>

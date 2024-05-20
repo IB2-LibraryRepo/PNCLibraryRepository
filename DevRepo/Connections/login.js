@@ -28,7 +28,7 @@ submit.addEventListener("click", function (event) {
 
   const username = document.getElementById('user').value.trim();
   const password = document.getElementById('password').value.trim();
-  
+
   if (username === "" || password === "") {
     // Show error modal with a custom message
     document.getElementById('errorMessage').textContent = "Email and Password fields cannot be empty.";
@@ -46,6 +46,7 @@ submit.addEventListener("click", function (event) {
       // Show success modal
       const successModal = new bootstrap.Modal(document.getElementById('successModal'));
       successModal.show();
+      window.location.href = '../Dashboard/Dashboard.html'; // Redirect to Dashboard.html
     })
     .catch((error) => {
       const errorCode = error.code;

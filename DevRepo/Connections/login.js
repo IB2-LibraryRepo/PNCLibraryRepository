@@ -46,7 +46,9 @@ submit.addEventListener("click", function (event) {
       // Show success modal
       const successModal = new bootstrap.Modal(document.getElementById('successModal'));
       successModal.show();
+      // Redirect to login.html when the login link is clicked
       window.location.href = '../Dashboard/Dashboard.html'; // Redirect to Dashboard.html
+
     })
     .catch((error) => {
       const errorCode = error.code;

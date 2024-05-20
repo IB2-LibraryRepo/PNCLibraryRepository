@@ -1,0 +1,148 @@
+/* Add your custom styles here */
+
+/* Navbar */
+.navbar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1020; /* Ensure it sits above other elements */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-100%); /* Initially moved above viewport */
+  }
+  .navbar.navbar-loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .navbar-brand img {
+    max-height: 40px;
+  }
+  .navbar-brand span {
+    font-size: 1.25rem;
+    color: #fff; /* Ensure the text color contrasts with the background */
+    margin-left: 10px; /* Space between the logo and text */
+  }
+  .navbar-scrolled {
+    background-color: #fff !important; /* Change background color to white */
+  }
+  .navbar-scrolled .navbar-brand span {
+    color: #0d721a !important; /* Change text color to black */
+  }
+  .navbar-scrolled .nav-item a {
+    color: #0d721a !important; /* Change text color to black */
+  }
+  .navbar-scrolled .nav-item a:hover,
+  .navbar-scrolled .nav-item a:focus {
+    color: #000000 !important; /* Change text color to black */
+    background-color: #0d721a; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners for the hover effect */
+  }
+  
+  /* Navbar links hover effect */
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff; /* Default link color */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: #0d721a; /* Hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Background color on hover */
+    border-radius: 5px; /* Rounded corners for the hover effect */
+  }
+  
+  /* Add this CSS for changing icon color to black when scrolled */
+  .navbar-dark .navbar-toggler-icon {
+    filter: invert(1); /* Invert the color of the icon to black */
+  }
+  
+  /* Custom CSS */
+  .hero-section {
+    position: relative;
+    background-image: url('../images/BG1.jpg'); /* Change to your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    height: 100vh; /* Full height of viewport */
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 22, 21, 0.7); /* Overlay color */
+    z-index: 0; /* Ensure it's behind the content */
+  }
+  .hero-section-content {
+    position: relative; /* Ensure content is stacked on top of overlay */
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Align children in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+  }
+  .hero-section h1,
+  .hero-section p,
+  .hero-section a {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially moved below viewport */
+  }
+  .hero-section h1.hero-loaded,
+  .hero-section p.hero-loaded,
+  .hero-section a.hero-loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  .hero-section h1 {
+    margin-top: 1.5em;
+    font-size: 3.5rem;
+  }
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+  /* About Section and Scholarly Works Section */
+  .about-section, .scholarly-works-section {
+    padding: 60px 0;
+  }
+  .about-section img, .scholarly-works-section img {
+    object-fit: cover; /* Ensure the image covers the full height */
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .about-section h2, .scholarly-works-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-section p, .scholarly-works-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  .scholarly-works-section {
+    background-color: #f8f9fa; /* Add a background color to distinguish the section */
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    background-color: #343a40;
+    color: #fff;
+  }
+  footer h5 {
+    margin-bottom: 15px;
+  }
+  footer p, footer a {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  footer a {
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

@@ -612,33 +612,19 @@ input[type="search"] {
   background-color: #ffffff;
   color: rgb(6, 136, 71);
 }
-.card-horizontal {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.table-responsive {
+  margin-top: 20px;
+}
+.table th, .table td {
+  vertical-align: middle;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #e8ebe8; /* Light green */
 }
 
-.card-horizontal img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-right: 20px;
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #a9e9b8; /* Darker green */
 }
-
-.card-body {
-  flex: 1;
-}
-
-.actions {
-  margin-top: 10px;
-}
-
-.actions button {
-  margin-right: 10px;
-}
-
 
 /*--table design end----*/
 

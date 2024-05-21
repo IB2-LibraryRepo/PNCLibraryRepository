@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <link rel="icon" type="image/x-icon" href="/DevRepo/images/logo.ico">
-  <title>My Accessed Works</title>
+  <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+  <title>Dashboard</title>
 
   <!-- Bootstrap CSS CDN -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -31,39 +31,36 @@
     <div id="sidebar">
       <div class="sidebar-header">
         <h3>
-          <img src="/DevRepo/images/logo.png" class="img-fluid" style="width: 28px; height: 28px; margin-right: 10px;" />
+          <img src="../images/logo.png" class="img-fluid" style="width: 28px; height: 28px; margin-right: 10px;" />
           <span style="font-weight: bold;">PNC LR</span>
         </h3>
       </div>
       <ul class="list-unstyled component m-0">
-        <li>
-          <a href="/DevRepo/Dashboard/DashboardUser.html" class="dashboard"><i class="bi bi-house"></i>Dashboard</a>
+        <li class="active">
+          <a href="#" class="dashboard"><i class="bi bi-house"></i>Dashboard</a>
         </li>
         <li>
-          <a href="/DevRepo/Pages(User)/SearchPage/Search.html"><i class="bi bi-search"></i>Search Scholarly Works</a>
+          <a href="../Pages(Prof)/SearchPage/Search.html"><i class="bi bi-search"></i>Search Scholarly Works</a>
         </li>
         <li>
-          <a href="/DevRepo/Pages(User)/UploadPage/Upload.html"><i class="bi bi-arrow-bar-up"></i>Upload Scholarly Works</a>
+          <a href="../Pages(Prof)/UploadPage/Upload.html"><i class="bi bi-arrow-bar-up"></i>Upload Scholarly Works</a>
         </li>
         <li class="dropdown">
           <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
             <i class="bi bi-layout-sidebar-inset"></i> Manage Tab
           </a>
-          <ul class="collapse show list-unstyled menu" id="homeSubmenu1">
-            <li class="active">
-              <a href="/DevRepo/Pages(User)/AccessedWorkPage/MyAccessedWorks.html">
-                <i class="bi bi-file-earmark-text"></i> My Accessed Works
+          <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+            <li>
+              <a href="../Pages(Prof)/AccessedWorkPage/MyAccessedWorks.html">
+                <i class="bi bi-file-earmark-text"></i> My Uploaded Works
               </a>
             </li>
             <li>
-              <a href="/DevRepo/Pages(User)/CitePage/Cite.html">
+              <a href="../Pages(Prof)/CitePage/Cite.html">
                 <i class="bi bi-quote"></i> Cite Scholarly Works
               </a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a href="/DevRepo/Pages(User)/ViewRequestPage/ViewRequest.html"><i class="bi bi-view-list"></i>View Request</a>
         </li>
       </ul>
     </div>
@@ -102,11 +99,11 @@
                     </li>
                     <li class="dropdown nav-item">
                       <a class="nav-link" href="#" data-toggle="dropdown">
-                        <img src="/DevRepo/images/BG.jpg" style="width:30px; height:30px; border-radius:50%;" />
+                        <img src="../images/logo.png" style="width:30px; height:30px; border-radius:50%;" />
                         <span class="xp-user-live"></span>
                       </a>
                       <ul class="dropdown-menu small-menu">
-                        <li><a href="/DevRepo/HomePage/Home.html"><span class="bi bi-box-arrow-right"></span>Logout</a></li>
+                        <li><a href="../HomePage/Home.html"><span class="bi bi-box-arrow-right"></span>Logout</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -115,10 +112,10 @@
             </div>
           </div>
           <div class="xp-breadcrumbbar text-center">
-            <h4 class="page-title">My Accessed Works</h4>
+            <h4 class="page-title">Dashboard</h4>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">PNC</a></li>
-              <li class="breadcrumb-item active" aria-current="page">MyAccessedWorks</li>
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
           </div>
         </div>
@@ -154,11 +151,11 @@
                   </li>
                   <li class="dropdown nav-item">
                     <a class="nav-link" href="#" data-toggle="dropdown">
-                      <img src="/DevRepo/images/BG.jpg" style="width:30px; height:30px; border-radius:50%;" />
+                      <img src="../images/BG.jpg" style="width:30px; height:30px; border-radius:50%;" />
                       <span class="xp-user-live"></span>
                     </a>
                     <ul class="dropdown-menu small-menu">
-                      <li><a href="/DevRepo/HomePage/Home.html"><span class="bi bi-box-arrow-right"></span>Logout</a></li>
+                      <li><a href="../HomePage/Home.html"><span class="bi bi-box-arrow-right"></span>Logout</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -174,14 +171,14 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3>Recommended Books</h3>
+                <h3>Uploaded Works</h3>
               </div>
               <div class="card-body">
-                <!-- Recommended Books Cards -->
+                <!-- Recommended Works Cards -->
                 <div class="row">
                   <div class="col-lg-4 col-md-6 mb-4 d-flex">
                     <div class="card w-100">
-                      <img class="card-img-top" src="/DevRepo/images/BG.jpg" alt="Introduction to Machine Learning"
+                      <img class="card-img-top" src="../images/BG.jpg" alt="Introduction to Machine Learning"
                         style="height: 150px; object-fit: cover;">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Introduction to Machine Learning</h5>
@@ -191,17 +188,17 @@
                   </div>
                   <div class="col-lg-4 col-md-6 mb-4 d-flex">
                     <div class="card w-100">
-                      <img class="card-img-top" src="/DevRepo/images/BG.jpg" alt="Data Structures and Algorithms"
+                      <img class="card-img-top" src="../images/BG.jpg" alt="Data Structures and Algorithms"
                         style="height: 150px; object-fit: cover;">
                       <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Data Structures and Algorithms</h5>
+                        <h5 class="card-title">NodeJS: Tutorial</h5>
                         <button class="btn btn-outline-success mt-auto">Check Availability</button>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6 mb-4 d-flex">
                     <div class="card w-100">
-                      <img class="card-img-top" src="/DevRepo/images/BG.jpg" alt="Python Programming for Beginners"
+                      <img class="card-img-top" src="../images/BG.jpg" alt="Python Programming for Beginners"
                         style="height: 150px; object-fit: cover;">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Python Programming for Beginners</h5>
@@ -221,7 +218,7 @@
                 <h3>Recently Viewed</h3>
               </div>
               <div class="card-body">
-                <!-- Recently Viewed Books Table -->
+                <!-- Recently Viewed Works Table -->
                 <div class="table-responsive">
                   <table class="table table-striped table-bordered" style="border: 2px solid #28a745;">
                     <thead>
@@ -246,6 +243,52 @@
                         <td>3</td>
                         <td><a href="#" style="color: #28a745;">Design Patterns in C#</a></td>
                         <td>"Comprehensive guide to implementing design patterns."</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3>Recently Uploaded Status</h3>
+              </div>
+              <div class="card-body">
+                <!-- Uploaded Works Table -->
+                <div class="table-responsive">
+                  <table class="table table-striped table-bordered" style="border: 2px solid #28a745;">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>File</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Dummy data -->
+                      <tr>
+                        <td>1</td>
+                        <td>Testing the Limits</td>
+                        <td><img src="/DevRepo/images/BG.jpg" alt="File" style="width: 50px; height: auto;"></td>
+                        <td>On Review</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>NodeJS: Tutorial</td>
+                        <td><img src="/DevRepo/images/BG.jpg" alt="File" style="width: 50px; height: auto;"></td>
+                        <td>Published</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Python Programming for Beginners</td>
+                        <td><img src="/DevRepo/images/BG.jpg" alt="File" style="width: 50px; height: auto;"></td>
+                        <td>Published</td>
                       </tr>
                     </tbody>
                   </table>

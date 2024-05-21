@@ -37,6 +37,22 @@ submit.addEventListener("click", function (event) {
     return;
   }
 
+  if (username == "P0124" && password == "Testing123") {
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+
+    // Add a delay of 3 seconds before redirecting to the dashboard
+    setTimeout(() => {
+      window.location.href = '../Dashboard/DashboardProfessor.html'; // Redirect to Dashboard.html
+    }, 3000); // 3000 milliseconds = 3 seconds
+    return;
+  } else {
+    document.getElementById('errorMessage').textContent = "Invalid username or password.";
+    const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+    errorModal.show();
+    return;
+  }
+
   const email = username + '@pncedu.com';
 
   signInWithEmailAndPassword(auth, email, password)

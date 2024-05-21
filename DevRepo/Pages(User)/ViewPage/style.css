@@ -396,6 +396,7 @@ input[type="search"] {
 
 .main-content {
   padding: 30px 30px 0px 30px;
+  margin-top: 70px;
 }
 
 .navbar {
@@ -589,7 +590,9 @@ input[type="search"] {
 
 
 /*--table design start----*/
-
+.card {
+  margin-top: 20px;
+}
 
 .card {
   border: 2px solid #28a745; /* Green outline */
@@ -624,6 +627,20 @@ input[type="search"] {
 
 .table-striped tbody tr:nth-of-type(even) {
   background-color: #a9e9b8; /* Darker green */
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+}
+.star.checked {
+  color: gold;
+}
+
+.divider-green {
+  border-top: 2px solid green;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*--table design end----*/

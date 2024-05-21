@@ -46,9 +46,11 @@ submit.addEventListener("click", function (event) {
       // Show success modal
       const successModal = new bootstrap.Modal(document.getElementById('successModal'));
       successModal.show();
-      // Redirect to login.html when the login link is clicked
-      window.location.href = '../Dashboard/Dashboard.html'; // Redirect to Dashboard.html
 
+      // Add a delay of 3 seconds before redirecting to the dashboard
+      setTimeout(() => {
+        window.location.href = '../Dashboard/DashboardUser.html'; // Redirect to Dashboard.html
+      }, 3000); // 3000 milliseconds = 3 seconds
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -58,4 +60,4 @@ submit.addEventListener("click", function (event) {
       const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
       errorModal.show();
     });
-});
+})

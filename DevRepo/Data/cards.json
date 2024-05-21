@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Introduction to Machine Learning",
+      "tags": "Machine Learning, AI",
+      "image": "/DevRepo/images/BG.jpg"
+    },
+    {
+      "title": "Data Structures and Algorithms",
+      "tags": "Data Structures, Algorithms",
+      "image": "/DevRepo/images/BG.jpg"
+    },
+    {
+      "title": "Python Programming for Beginners",
+      "tags": "Python, Programming",
+      "image": "/DevRepo/images/BG.jpg"
+    },
+    {
+      "title": "Artificial Intelligence: A Modern Approach",
+      "tags": "AI, Artificial Intelligence",
+      "image": "/DevRepo/images/BG.jpg"
+    },
+    {
+      "title": "Deep Learning",
+      "tags": "Deep Learning, Neural Networks",
+      "image": "/DevRepo/images/BG.jpg"
+    },
+    {
+      "title": "Computer Networks",
+      "tags": "Networks, Computer Science",
+      "image": "/DevRepo/images/BG.jpg"
+    }
+  ]
+  

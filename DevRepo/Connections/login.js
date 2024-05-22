@@ -29,51 +29,49 @@ submit.addEventListener("click", function (event) {
   const username = document.getElementById('user').value.trim();
   const password = document.getElementById('password').value.trim();
 
+  // Check if username and password are provided
   if (username === "" || password === "") {
-    // Show error modal with a custom message
-    document.getElementById('errorMessage').textContent = "Email and Password fields cannot be empty.";
-    const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-    errorModal.show();
-    return;
-  }
-
-  if (username == "P0124" && password == "Testing123") {
-    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-    successModal.show();
-
-    // Add a delay of 3 seconds before redirecting to the dashboard
-    setTimeout(() => {
-      window.location.href = '../Dashboard/DashboardProfessor.html'; // Redirect to Dashboard.html
-    }, 3000); // 3000 milliseconds = 3 seconds
-    return;
-  } else {
-    document.getElementById('errorMessage').textContent = "Invalid username or password.";
-    const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-    errorModal.show();
-    return;
-  }
-
-  const email = username + '@pncedu.com';
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      // Show success modal
-      const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-      successModal.show();
-
-      // Add a delay of 3 seconds before redirecting to the dashboard
-      setTimeout(() => {
-        window.location.href = '../Dashboard/DashboardUser.html'; // Redirect to Dashboard.html
-      }, 3000); // 3000 milliseconds = 3 seconds
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // Show error modal
-      document.getElementById('errorMessage').textContent = errorMessage;
+      // Show error modal with a custom message
+      document.getElementById('errorMessage').textContent = "Username and password fields cannot be empty.";
       const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
       errorModal.show();
-    });
-})
+      return;
+  }
+
+  // Sign in with email and password
+  signInWithEmailAndPassword(auth, username + '@pncedu.com', password)
+      .then((userCredential) => {
+          // Signed in successfully
+          const user = userCredential.user;
+
+          const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+          successModal.show();
+          // Determine the user role and redirect accordingly
+          if (username === "P0124") {
+              // Redirect to professor dashboard after 3 seconds
+              setTimeout(() => {
+                  window.location.href = '../Dashboard/DashboardProfessor.html';
+              }, 3000);
+          } else if (username === "L0124") {
+              // Redirect to staff dashboard after 3 seconds
+              setTimeout(() => {
+                  window.location.href = '../Dashboard/DashboardStaff.html';
+              }, 3000);
+          } else {
+              // Redirect to user dashboard after 3 seconds
+              setTimeout(() => {
+                  window.location.href = '../Dashboard/DashboardUser.html';
+              }, 3000);
+          }
+      })
+      .catch((error) => {
+          // Error occurred during sign in
+          const errorCode = error.code;
+          const errorMessage = error.message;
+
+          // Show error modal
+          document.getElementById('errorMessage').textContent = errorMessage;
+          const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+          errorModal.show();
+      });
+});
